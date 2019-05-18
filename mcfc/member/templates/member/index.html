@@ -1,4 +1,9 @@
-{% extends "home/home/base.html" %}
+
+{% extends "home/base.html" %}
+{% load static%}
+{% block extralink %}
+    <link href = "{% static "member.css"%}" rel='stylesheet'/>
+{% endblock %}
 {% block content %}
 <section class="container">
           <div class="for-seo">
