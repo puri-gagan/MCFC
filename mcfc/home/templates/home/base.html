@@ -38,13 +38,12 @@
     
     {% endblock %}
     <!-- reponsive -->
-    {% block script %}
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js?ver=3.2.1"
     ></script>
     <script src="https://use.fontawesome.com/45a5a1da21.js"></script>
-    {% endblock %}
+
   </head>
   <body
     style="background-color: #98c5e9"
@@ -140,12 +139,12 @@
                   <li
                     class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-53 current_page_item menu-item-55 is-active"
                   >
-                    <a href="#">Home</a>
+                    <a href="{% url 'homepage' %}">Home</a>
                   </li>
                   <li
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"
                   >
-                    <a href="#">Members</a>
+                    <a href="{% url 'member' %}">Members</a>
                   </li>
                   <li
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"
@@ -155,12 +154,17 @@
                   <li
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005"
                   >
-                    <a href="#">WallPaper Gallery</a>
+                    <a href="{% url 'gallery' %}">WallPaper Gallery</a>
                   </li>
                   <li
                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413"
                   >
                     <a href="#">Merchandise Comparison</a>
+                  </li>
+                  <li
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413"
+                  >
+                    <a href="{% url 'blog'%}">Blog</a>
                   </li>
                 </ul>
               </div>
@@ -467,6 +471,9 @@
         <script type="text/javascript">
           var elm_button_vars = { wrapper: "#news-post-holder" };
         </script>
+        {% block extrascript %}
+    
+    {% endblock %}
       </div>
       <!-- Closing off-canvas-content tag-->
     </div>
