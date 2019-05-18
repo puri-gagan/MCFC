@@ -5,7 +5,7 @@
     <title>MCFCN</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://use.fontawesome.com/45a5a1da21.js"></script>
+    {% block link %}
     <link
       rel="stylesheet"
       id="easy_load_more-frontend-css"
@@ -34,11 +34,15 @@
       type="text/css"
       media="all"
     />
+    {% endblock %}
     <!-- reponsive -->
+    {% block script %}
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js?ver=3.2.1"
     ></script>
+    <script src="https://use.fontawesome.com/45a5a1da21.js"></script>
+    {% endblock %}
   </head>
   <body
     style="background-color: #98c5e9"
@@ -421,6 +425,8 @@
           </section>
         </section>
         {% endblock %}
+
+        
         <div class="footer-container" data-sticky-footer="">
           <footer class="footer grid-x">
             <a id="back-top" href="#"
